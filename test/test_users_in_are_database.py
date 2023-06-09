@@ -6,4 +6,5 @@ from shopping.models import Cart
 def test_cart_str_representation():
     user = User.objects.create_user(username='testuser', password='testpass')
     cart = Cart.objects.create(user=user)
+
     assert str(cart) == f"Cart {cart.pk}"
